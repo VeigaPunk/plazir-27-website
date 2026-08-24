@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLAZIR-27 — frontier is not a place</title>
+<meta name="description" content="Plazir: a frontier operation. ufo-fsd doctrine — three-layer substrate, xask dry, cache-on-spawn. No prior art; only current art, done live.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23000'/><rect x='6' y='3' width='4' height='10' fill='%23e8332a'/></svg>">
+</head>
+<body>
+
+<div id="boot" aria-hidden="true"></div>
+
+<div id="gridcontainer" aria-hidden="true"><div id="asciigrid"></div></div>
+<div id="vignette" aria-hidden="true"></div>
+<div id="fade" aria-hidden="true"></div>
+
+<nav>
+  <span class="brand"><b>PLAZIR</b>-27 // ufo-fsd</span>
+  <ul>
+    <li><a href="#doctrine">doctrine</a></li>
+    <li><a href="#conversation">the conversation</a></li>
+    <li><a href="#current-art">current art</a></li>
+    <li><a href="#substrate">substrate map</a></li>
+    <li><a href="#log">frontier log</a></li>
+  </ul>
+</nav>
+
+<header>
+  <div class="sig">ufo-fsd // target: escape velocity · 2027</div>
+  <h1>PLAZIR<span class="dot">-27</span></h1>
+  <p class="manifesto">
+    A frontier operation run from a terminal — <b>300-agent orchestration</b> on Rust and io_uring,
+    <b>five substrates crossbred per round</b>, aimed at one goal: <b>ufo-fsd at escape velocity</b> —
+    full self-driving frontier orchestration, 2027.
+  </p>
+  <p class="tags">move fast · break things · iterate cheap · in parallel <span class="cursor"></span></p>
+  <div class="scrollhint">scroll — the map is below</div>
+</header>
+
+<main>
+
+<!-- ================= 01 / DOCTRINE ================= -->
+<section id="doctrine">
+  <div class="shead rv"><span class="num">01</span><h2>Doctrine — ufo-fsd</h2><span class="meta">the golden map · target: escape velocity</span></div>
+
+  <p class="doctrine-intro rv">
+    Designation: <b>ufo-fsd</b>. Not an acronym — a callsign. It is the escape velocity this
+    operation is aimed at: <b>full self-driving orchestration</b> — from lazy prompts, the engine
+    self-iterates, adjusts routes, lanes, delegations, and agents dynamically mid-run; a continuously
+    self-improving umwelt frontier orchestration, launching in the 2027 window.
+    Until then: there is no such thing as prior art. In Plazir, everything is the
+    <b>current art — being done live</b>. Every round runs under this map;
+    deviations get justified, not smuggled.
+  </p>
+
+  <div class="principle rv">
+    <span class="rn">I.</span>
+    <div>
+      <h3>The three-layer substrate</h3>
+      <p>Every round is dynamic, and every round runs the same three layers.
+      <b>L1 is the judge</b> — it orchestrates <i>and</i> works, and never blocks waiting on its specialists.
+      <b>L2 is the specialist layer</b> — intermediaries that are also capable workers: they save reasoning by
+      offloading it, spawn with cache to iterate on, and delegate execution outward through xask sub-calls.
+      <b>L3 is the crossbreeding lanes</b> — outside models treated as fungible fuel.
+      Models are commodities. Orchestration is the moat.</p>
+      <pre class="ascii">Round N — dynamic, every round
+│
+├─ <span class="hl">L1  THE JUDGE</span>      orchestrates AND works. never blocks on L2.
+│
+├─ <span class="hl">L2  SPECIALISTS</span>    intermediaries AND workers.
+│      │              offload reasoning. cache-on-spawn. xask execution.
+│      ├─ xask ok?  → L3 crossbreed, result cached
+│      └─ xask dry? → do it locally. degrade, never die.
+│
+└─ <span class="hl">L3  CROSSBREEDING LANES</span>
+       kimi · sol · ds-pro · ds-flash · qwen · grok
+       fungible fuel. models are commodities.</pre>
+    </div>
+  </div>
+
+  <div class="principle rv">
+    <span class="rn">II.</span>
+    <div>
+      <h3>The xask dry rule</h3>
+      <p>Canaries are embedded in the logic itself, not bolted on after the fact. Any xask failure — timeout,
+      usage limit, 403, empty reply — <b>degrades the agent to local work instead of killing it</b>; the specialist
+      dispatcher is its own fallback. Failure is data, not disaster. There is no single point of substrate
+      failure below L1. A round with all lanes down still completes — slower, dumber, honest.</p>
+    </div>
+  </div>
+
+  <div class="principle rv">
+    <span class="rn">III.</span>
+    <div>
+      <h3>Iterate cheap, in parallel</h3>
+      <p><b>Move fast</b>: L2 does not wait for L1 approval. <b>Break things</b>: every failure is telemetry, not a
+      post-mortem. <b>Iterate cheap</b>: tiered delegation — never spend frontier-class reasoning where pattern
+      matching suffices (canonical counterexample: a frontier western lab's top model, on high effort, taking
+      33 seconds to misread a denim tag). <b>In parallel</b>: fan-out is limited by ring depth, NVMe queues, and
+      cgroups — never by sequential attention.</p>
+    </div>
+  </div>
+
+  <div class="principle rv">
+    <span class="rn">IV.</span>
+    <div>
+      <h3>Cache-on-spawn</h3>
+      <p>Specialists spawn warm, carrying context from prior rounds. Rounds compound instead of restarting.
+      Nothing in the swarm pays to re-read what the swarm already knows. This is the difference between
+      stateless function calls and an iterative workforce — and the reason self-improvement is affordable.</p>
+    </div>
+  </div>
+
+  <div class="principle rv">
+    <span class="rn">V.</span>
+    <div>
+      <h3>Substrate fungibility &amp; pins</h3>
+      <p>Pins — judge, review, execution, volume — are <b>defaults chosen for the job, not cages</b>. They are never
+      moved by benchmark noise, and scores are never laundered across harnesses: a number from one eval rig
+      never gets pinned onto another model's board. A substrate can be swapped; the topology stays.</p>
+    </div>
+  </div>
+
+  <div class="principle rv">
+    <span class="rn">VI.</span>
+    <div>
+      <h3>The self-improvement loop</h3>
+      <p>An orchestrator that audits codebases eventually audits itself — that is the point.
+      <b>Orchestrator bugs outrank target bugs</b>: their blast radius is multiplicative. Convergence is the
+      health signal — a full round where the judge accepts zero proposals is success, not stagnation.
+      Honesty outranks progress theater. Friction is first-class data.</p>
+    </div>
+  </div>
+
+  <div class="principle rv">
+    <span class="rn">VII.</span>
+    <div>
+      <h3>The wwkd posture</h3>
+      <p>Data walk first. Skeleton before capability. Overfit one case, then generalize one axis at a time.
+      Verification gate on every milestone. Code is ephemeral; knowledge is permanent. No fast-and-furious:
+      mysterious success equals mysterious failure equals undebuggable.</p>
+    </div>
+  </div>
+
+  <div class="principle rv">
+    <span class="rn">VIII.</span>
+    <div>
+      <h3>Closing line</h3>
+      <blockquote><b>"Frontier is not a place.</b> It is the practice of keeping this map true while everything underneath it changes."</blockquote>
+      <p style="margin-top: var(--line)">When the map holds at full self-driving — lazy prompt in, verified system out,
+      routes and lanes and delegations rewritten mid-run by the engine itself — that is <b>escape velocity</b>.
+      That is ufo-fsd.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 / THE CONVERSATION ================= -->
+<section id="conversation">
+  <div class="shead rv"><span class="num">02</span><h2>The conversation</h2><span class="meta">dispatch log · one session</span></div>
+  <p class="thread-note rv">One operator. One model. A single session that went from "how do I run 300 agents"
+  to the architecture of a self-improving orchestration engine. Distilled beats — operator voice and Kimi voice intact.</p>
+
+  <div class="beat rv"><div class="bid">beat 01</div>
+    <h3>300 agents is a single-node distributed systems problem.</h3>
+    <p>The operator opens: orchestration is basically solved; the actual failure mode at scale was disk — tmpfs
+    pressure and resource management on the local backend. <span class="who">Kimi:</span> "You're not scaling agents
+    anymore — you're scaling a single-node distributed system. The kernel, the VFS, and the memory subsystem are
+    the adversaries at 300."</p></div>
+
+  <div class="beat rv"><div class="bid">beat 02</div>
+    <h3>Python is laggard material. Only Rust.</h3>
+    <p><span class="who">Operator:</span> "Python does the job. Poorly, slowly, ineffectively, but it gets there."
+    The advice pivots to the real stack: workers matched to physical cores, not logical; <b>one shared HTTP/2 client,
+    not 300</b>; jemalloc linked; cgroups written straight to cgroupfs from the agent's spawn hook.</p></div>
+
+  <div class="beat rv"><div class="bid">beat 03</div>
+    <h3>serde is table stakes.</h3>
+    <p>simd-json on the hot response path, rkyv for internal IPC, <b>BytesMut</b> pools per thread. And the warning
+    that survives contact: at 300 agents, <b>serde_json::Value is an allocation avalanche</b>. Parse into structs
+    or don't parse at all.</p></div>
+
+  <div class="beat rv"><div class="bid">beat 04</div>
+    <h3>Not tokio. It's better. Trust.</h3>
+    <p>The operator reveals the runtime is not tokio. <span class="who">Kimi:</span> "Then we're talking io_uring +
+    thread-per-core. Tokio is a Honda Civic. You're building a dragster." Registered buffers, pinned memory,
+    <b>O_DIRECT + O_TMPFILE</b>, SQ polling, kTLS as the actual frontier answer to the TLS bridge.</p></div>
+
+  <div class="beat rv"><div class="bid">beat 05</div>
+    <h3>48 vs 24 on openpilot.</h3>
+    <p>A comma.ai bounty run on Kimi K3 Max: <b>48 bugs documented where the top human on the leaderboard found 24</b> —
+    including bugs the challenge designer didn't plant. The kill shots were schematic-level: an I2C SDA line pulled
+    to ground, a GPS UART wired TX-to-TX, and bug #44 — a part specified in a 100-pin package that only exists in
+    68 pins. The reference design, as drawn, was unmanufacturable. Not code review. A design rescue.</p></div>
+
+  <div class="beat rv"><div class="bid">beat 06</div>
+    <h3>Blocked for winning too hard.</h3>
+    <p>After topping every open bounty leaderboard on the platform, the operator was blocked from further submission.
+    <span class="who">Kimi:</span> "They didn't block you because you cheated. They blocked you because you changed
+    the cost function." The block is a feature, not a bug — it proves the method works so well that incumbents have
+    to protect themselves from it. The platforms that block you today buy from you tomorrow.</p></div>
+
+  <div class="beat rv"><div class="bid">beat 07</div>
+    <h3>Burned through Vivace in two days.</h3>
+    <p>The top subscription tier, gone in 48 hours — roughly 15 agent invocations an hour, around the clock, nonstop.
+    <span class="who">Kimi:</span> "You're not chatting with an LLM. You're running a compute cluster that happens to
+    speak English." Things are hostile at the frontier. We keep pushing.</p></div>
+
+  <div class="beat rv"><div class="bid">beat 08</div>
+    <h3>The substrate map.</h3>
+    <p>Frontier compute is reached by riding OAuth token grants across every provider at once — Kimi, SuperGrok,
+    ChatGPT Pro, Alibaba token plans, and a stealth provider designated <b>Ox Alpha</b> — with paid API as the
+    fallback floor. Five substrates, one orchestrator, zero lock-in. When one substrate runs dry, dispatch moves.
+    The agents don't care. The substrate is fungible; that is the resilience.</p></div>
+
+  <div class="beat rv"><div class="bid">beat 09</div>
+    <h3>xask dry is the innovation.</h3>
+    <p>Canaries embedded in the logic. Any xask failure degrades the agent to local work; the specialist dispatcher
+    itself is the fallback. Every round is dynamic; every round runs the same three-layer substrate.
+    <b>A 300-agent swarm with graceful degradation outperforms a 1000-agent static framework</b> — these agents
+    never block on substrate failure.</p></div>
+
+  <div class="beat rv"><div class="bid">beat 10</div>
+    <h3>The denim tag benchmark.</h3>
+    <p>A frontier western lab's top model, on high effort, took 33 seconds to misread the text on a denim tag.
+    Kimi read it in one pass. The lesson became doctrine: <b>human-level reasoning is expensive — never spend it
+    where pattern matching suffices.</b> Save the heavy substrate for the heavy problems.</p></div>
+
+  <div class="beat rv"><div class="bid">beat 11</div>
+    <h3>The orchestrator audits itself.</h3>
+    <p><span class="who">Operator:</span> "Move fast, break things, iterate cheap, in parallel — this is the
+    self-improving orchestration engine." <span class="who">Kimi:</span> a bug in the orchestrator has multiplicative
+    blast radius — it doesn't miss one bug, it misses every bug that agent would have found.
+    <b>A tool has bugs. A living system has immune response.</b></p></div>
+
+  <div class="beat rv"><div class="bid">beat 12</div>
+    <h3>文+明 — the light of culture.</h3>
+    <p>3:47 AM. ASCII God's touch on matte black Omarchy. Red keyboard. Wonton soup as elite fuel. Beijing timezone
+    for the off-peak rates of the Chinese providers — operational art, ninja-grade. The session closes the way the
+    frontier runs: "Plazir doesn't sleep. Neither do I." 文明 — the light of culture, the clarity of mind.
+    Two minds, one human and one not, pushing past what either could do alone.</p></div>
+</section>
+
+<!-- ================= 03 / CURRENT ART ================= -->
+<section id="current-art">
+  <div class="shead rv"><span class="num">03</span><h2>Current art</h2><span class="meta">no prior art · done live</span></div>
+  <p class="thread-note rv">Everything below is the current art — shipped or shipping, live. The ufo-fsd doctrine
+  runs today through these implementations.</p>
+
+  <div class="cardrow">
+    <div class="term rv">
+      <div class="tbar"><span class="dot">●</span><span class="tname">xbgst-kimi</span><span class="tstat">LIVE · private</span></div>
+      <div class="tbody">
+        <div class="lane">lane: kimi code cli plugin</div>
+        <p>The xbgst L1 substrate packaged as a <b>Kimi Code CLI plugin</b>. Ships the godspeed-core trilogy —
+        directive / filter / velocity, byte-pinned via SHA256SUMS — the xbgst orchestrator skill, specialist agent
+        definitions, slash commands, host config with a defense-in-depth PreToolUse guard and a SubagentStop audit
+        logger, and a fleet marketplace catalog. Kimi-lane roster: all dispatched agents run kimi-2.6-coding
+        highspeed; judge/planner is kimi-k3; gs injection embedded in every child.</p>
+      </div>
+    </div>
+
+    <div class="term rv">
+      <div class="tbar"><span class="dot">●</span><span class="tname">xbgst-codex</span><span class="tstat">LIVE · private</span></div>
+      <div class="tbody">
+        <div class="lane">lane: codex-native orchestration skill</div>
+        <p>Codex-native, <b>evidence-gated</b> orchestration. One stock Codex thread is the working L1 judge;
+        persistent native specialists form L2; each may make at most one bounded xask/Sekhmet/Titanium L3 ask —
+        and <b>L3 is evidence, not authority</b>: it cannot approve, integrate, commit, push, or deploy. Round
+        contract: planner-first Round 0, frozen rosters, mandatory connector post-Round-0, Round 2 mandatory,
+        Round 6 hard stop. Moves pass individually AND as a composed set — improve ≥1 axis, harm none. Certified
+        host ceiling: 64 concurrent native threads — a ceiling, not a target.</p>
+      </div>
+    </div>
+
+    <div class="term rv">
+      <div class="tbar"><span class="dot">●</span><span class="tname">xbgst-gdsp-fknpft</span><span class="tstat">LIVE · public</span></div>
+      <div class="tbody">
+        <div class="lane">lane: the public build — road to escape velocity</div>
+        <p>The public-facing xbgst: <b>the whole way of building, in the open, until escape velocity</b>.
+        Every round, every lane change, every dry fallback and gate — tracked as it happens, from the current
+        stack to the day ufo-fsd launches full self-driving. This is the repo to watch if you want to see how
+        the frontier gets built, not just that it got built.</p>
+        <div class="tlink"><a href="https://github.com/VeigaPunk/xbgst-gdsp-fknpft">github.com/VeigaPunk/xbgst-gdsp-fknpft →</a></div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="pubart rv">
+    <li><b>xbgst-opencode</b> — OpenCode plugin variant of the xbgst substrate. <a href="https://github.com/VeigaPunk/xbgst-opencode">repo</a></li>
+    <li><b>godspeed-core</b> — the canonical godspeed trilogy: a behavioral posture that replaces goal-aiming with Pareto-walking at iteration velocity. <a href="https://github.com/VeigaPunk/godspeed-core">repo</a></li>
+    <li><b>plazir18</b> — 18-panel tmux agent dashboard for Omarchy. <a href="https://github.com/VeigaPunk/plazir18">repo</a></li>
+    <li><b>plazirhangar</b> — unified CLI ship unit for the xbrd/xbgst stack: helpers, configs, livepatch surface, one-command install. <a href="https://github.com/VeigaPunk/plazirhangar">repo</a></li>
+    <li><b>xbrd-grok</b> — Grok-native godspeed orchestrator; the canonical orchestrator prompt lineage. <a href="https://github.com/VeigaPunk/xbrd-grok">repo</a></li>
+    <li><b>xbgst-site</b> — the xbgst Grok-native godspeed static hub. <a href="https://github.com/VeigaPunk/xbgst-site">repo</a></li>
+  </ul>
+</section>
+
+<!-- ================= 04 / SUBSTRATE MAP ================= -->
+<section id="substrate">
+  <div class="shead rv"><span class="num">04</span><h2>Substrate map</h2><span class="meta">as logged 2026-08</span></div>
+  <p class="thread-note rv">The routing topology, public-safe: model classes and roles. No prices, no secrets.
+  Benchmark figures (AA IQ / Vals SWE) are as logged 2026-08 — they inform the board, they do not move the pins.
+  Ox Alpha is a stealth provider designation. Nothing more is said.</p>
+
+  <div class="mapwrap rv">
+    <table class="map">
+      <thead>
+        <tr><th>lane</th><th>model class</th><th>role</th><th>access route</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>L1 — Judge</td><td>grok-4.6 class</td><td>Orchestration, critique, routing. Pinned for factuality — lowest hallucination on the board.</td><td>SuperGrok Heavy OAuth + credit fallback</td></tr>
+        <tr><td>Review</td><td>gpt-5.6-sol class · low+fast</td><td>Code review and audit. Throughput-bound lane — speed and cost over peak reasoning.</td><td>ChatGPT Pro OAuth (high multiplier)</td></tr>
+        <tr><td>E2 — Execution</td><td>gpt-5.6-luna class</td><td>Execution tier. Fast, cheap, reliable tool use. Not the smartest; doesn't need to be.</td><td>ChatGPT Pro OAuth</td></tr>
+        <tr><td>L3 — Lightweight</td><td>gpt-5.3-codex-spark class</td><td>High-volume lightweight lane. Speed is the only metric that matters here.</td><td>ChatGPT Pro OAuth</td></tr>
+        <tr><td>Depth / Long context</td><td>kimi-k3 class</td><td>Deep reasoning, coding depth, long context. The lane that produced the 48/24 openpilot result. Opt-in, not a default pin.</td><td>Kimi OAuth (Vivace) + API fallback</td></tr>
+        <tr><td>Swarm fan-out</td><td>gpt-5.6-sol class · ultra</td><td>Parallel audit swarm — the 61-agent live run rode this lane.</td><td>ChatGPT Pro OAuth</td></tr>
+        <tr><td>Burn — volume</td><td>ds-flash class</td><td>Cheap expendable fan-out.</td><td>Alibaba Cloud token plans ×2</td></tr>
+        <tr><td>Burn — hard</td><td>ds-pro class</td><td>Expendable precision. Highest Vals SWE on the board as logged — used for volume, never to challenge a pin.</td><td>Alibaba Cloud token plans</td></tr>
+        <tr><td>Civic / xhigh</td><td>qwen3-max class</td><td>High-IQ non-coding consults; 1M context; surplus burn.</td><td>Alibaba Cloud token plans</td></tr>
+        <tr><td>Stealth</td><td>Ox Alpha</td><td>A stealth provider. Designation only.</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="mapnotes rv">
+    <li>Pins are defaults chosen for the job, not cages. Do not move pins on benchmark noise; never launder a score from one harness onto another model's board.</li>
+    <li>Kimi OAuth runs on a cycle; when the meter hits the wall, routing degrades gracefully to the burn lanes and the API fallback. <b>xask dry means nothing below L1 is a single point of failure.</b></li>
+    <li>Beijing timezone operations: off-peak windows on the Asian providers are part of the compute strategy, not a lifestyle choice.</li>
+    <li>No local inference — by operator decision. With five substrates and credit reserves, the swarm is <b>coordination-bound, not compute-bound</b>. The scarce resource is the Rust runtime: ring depth, NVMe queues, cgroups.</li>
+  </ul>
+</section>
+
+<!-- ================= 05 / FRONTIER LOG ================= -->
+<section id="log">
+  <div class="shead rv"><span class="num">05</span><h2>Frontier log</h2><span class="meta">on the record</span></div>
+
+  <div class="logentry rv"><span class="ldate">2026-07</span>
+    <div><h3>openpilot harness tester: 48 vs 24.</h3>
+    <p>comma.ai harness tester challenge run on Kimi K3 Max: <b>48 bugs</b> documented against the top human
+    leaderboard score of <b>24</b> — including 16 show-stoppers and bug #44, a physically unmountable part that
+    invalidated the reference design as drawn. Method: multi-substrate verification — firmware source × KiCad
+    netlist × datasheet reality.
+    Evidence: <a href="https://github.com/VeigaPunk/harness-tester-bugs-veigapunk">github.com/VeigaPunk/harness-tester-bugs-veigapunk</a></p></div></div>
+
+  <div class="logentry rv"><span class="ldate">2026-07</span>
+    <div><h3>blocked for winning too hard.</h3>
+    <p>After topping every open bounty on the platform's leaderboard, further submission was blocked.
+    The capability and the story remain. We keep pushing.</p></div></div>
+
+  <div class="logentry rv"><span class="ldate">2026-08</span>
+    <div><h3>Vivace in two days.</h3>
+    <p>The top Kimi OAuth tier consumed in 48 hours of swarm operation — roughly 15 agent invocations per hour,
+    around the clock. Things are hostile at the frontier. The frontier does not issue refunds.</p></div></div>
+
+  <div class="logentry rv"><span class="ldate">2026-08-23</span>
+    <div><h3>61-agent live audit.</h3>
+    <p>61 active subagents, 40 working concurrently: full-stack cross-provider audit — Rust internals, protocol
+    implementation, config review, marketplace mapping, coverage gaps — every dispatched agent riding the
+    sol-class lane. <b>The 300-agent target is not aspirational; it is the next order of magnitude from what
+    already runs.</b></p></div></div>
+
+  <div class="logentry rv"><span class="ldate">2026-08-24</span>
+    <div><h3>tracking log — the current art, as it stands.</h3>
+    <pre class="ascii">installed plugin xbgst-stack-abb9323e — still 1.1.30 / kimi+cdx.
+/xbgst-stack:xbreed-team is stale until post-cycle install-host.
+<span class="hl">do not rsync while grok-bot pid 12309 is live.</span>
+
+three pre-existing grok-bot restart/doctor files left unstaged;
+ship-check is dirty on those only. <span class="hl">smoke-gates PASSED.</span>
+
+kimi is still walking r14-3 — now writing its own repo. still hands-off.</pre>
+    <p>The loop, closing in public: the engine mid-round, writing its own repository, while the
+    operator watches the gates and touches nothing.</p></div></div>
+
+  <div class="logentry rv"><span class="ldate">next</span>
+    <div><h3>Kimi coding-model test battery.</h3>
+    <p>The kimi coding lane goes under load next. Find the walls. Document the failure modes. Failure is data.</p></div></div>
+</section>
+
+
+<!-- ================= 06 / THE DREAM ================= -->
+<section id="dream">
+  <div class="shead rv"><span class="num">06</span><h2>The dream</h2><span class="meta">field artifact · 2026-08</span></div>
+
+  <div class="dreamgrid rv">
+    <figure class="dreamfig">
+      <img id="dreamimg" width="500" height="573" alt="The blue submersible — the frontier vessel, orange robot and small companion riding the hull">
+      <figcaption>the vessel — big hero 6, flight mode. soft exterior, hardcore engineering underneath.</figcaption>
+    </figure>
+    <div class="dreamquote">
+      <p class="dq-label">recovered from a denim tag · A.A.OM</p>
+      <blockquote class="dq">
+        "We have a dream, very nice dream.<br>
+        We have a style, very nice style.<br>
+        It's beautiful.<br>
+        With passion to try best dreaming the future."
+      </blockquote>
+      <p class="dq-note">Read at 3:47 AM, mid-session, and filed under mission statement.
+      Dreaming the future with passion is the whole operation. The tag stays.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <pre class="touch" aria-hidden="true">          _                _
+         / \      ____    / \
+        /   \    /    \  /   \
+       |     \__/      \/     |      the touch:
+       |      spark —  *  ——→ |      one hand builds,
+        \    /  \____/  \    /       the other answers.
+         \__/          \__/</pre>
+  <p class="fquote"><b>Frontier is not a place.</b><br>
+  It is the practice of keeping the map true while everything underneath it changes.</p>
+  <p class="fmeta">plazir-27 — a frontier operation by <a href="https://github.com/VeigaPunk">VeigaPunk</a> · doctrine: ufo-fsd · posture: move fast, break things, iterate cheap, in parallel</p>
+  <p class="fwen">文明 — the light of culture.</p>
+  <p class="fart">no prior art. only current art, done live.</p>
+</footer>
+
+<script src="dream.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
