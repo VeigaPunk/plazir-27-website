@@ -94,8 +94,9 @@
   }
 
   let last = 0;
+  let rafId = null;
   function frame(ts) {
-    requestAnimationFrame(frame);
+    rafId = requestAnimationFrame(frame);
     if (ts - last < 66) return;                    // ~15fps, terminal cadence
     last = ts;
     t = ts / 1000;
@@ -119,7 +120,14 @@
     gridEl.textContent = out;
   }
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    requestAnimationFrame(frame);
+    rafId = requestAnimationFrame(frame);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+      } else if (rafId === null) {
+        rafId = requestAnimationFrame(frame);
+      }
+    });
   } else {
     // static single render
     let out = '';

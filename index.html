@@ -3,30 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PLAZIR-27 — frontier is not a place</title>
-<meta name="description" content="Plazir: a frontier operation. ufo-fsd doctrine — three-layer substrate, xask dry, cache-on-spawn. No prior art; only current art, done live.">
+<title>PLAZIR-27 — ufo-fsd frontier operation</title>
+<meta name="description" content="PLAZIR-27 is a VeigaPunk frontier operation building ufo-fsd — full self-driving umwelt frontier orchestration by 2027. Doctrine, substrate map, current art, and frontier log.">
+<meta name="author" content="VeigaPunk">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://veigapunk.github.io/plazir-27-website/">
+
+<meta property="og:title" content="PLAZIR-27 — ufo-fsd frontier operation">
+<meta property="og:description" content="PLAZIR-27 is a VeigaPunk frontier operation building full self-driving umwelt frontier orchestration by 2027.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://veigapunk.github.io/plazir-27-website/">
+<meta property="og:site_name" content="PLAZIR-27">
+<meta property="og:image" content="https://veigapunk.github.io/plazir-27-website/dream.webp">
+<meta property="og:image:width" content="460">
+<meta property="og:image:height" content="527">
+<meta property="og:image:alt" content="The blue submersible frontier vessel — PLAZIR-27">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PLAZIR-27 — ufo-fsd frontier operation">
+<meta name="twitter:description" content="PLAZIR-27 is a VeigaPunk frontier operation building full self-driving umwelt frontier orchestration by 2027.">
+<meta name="twitter:image" content="https://veigapunk.github.io/plazir-27-website/dream.webp">
+<meta name="twitter:image:alt" content="The blue submersible frontier vessel — PLAZIR-27">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PLAZIR-27",
+  "url": "https://veigapunk.github.io/plazir-27-website/",
+  "description": "PLAZIR-27 is a VeigaPunk frontier operation building ufo-fsd — full self-driving umwelt frontier orchestration by 2027.",
+  "author": {
+    "@type": "Organization",
+    "name": "VeigaPunk",
+    "url": "https://github.com/VeigaPunk"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20260825">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23000'/><rect x='6' y='3' width='4' height='10' fill='%23e8332a'/></svg>">
 </head>
 <body>
 
-<div id="boot" aria-hidden="true"></div>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<button id="boot" type="button" aria-label="Dismiss boot sequence">
+  <span class="sr-only">Tap or press Enter to continue</span>
+</button>
 
 <div id="gridcontainer" aria-hidden="true"><div id="asciigrid"></div></div>
 <div id="vignette" aria-hidden="true"></div>
 <div id="fade" aria-hidden="true"></div>
 
-<nav>
+<nav aria-label="Primary">
   <span class="brand"><b>PLAZIR</b>-27 // ufo-fsd</span>
-  <ul>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open section menu" type="button">≡</button>
+  <ul id="nav-menu">
     <li><a href="#doctrine">doctrine</a></li>
     <li><a href="#conversation">the conversation</a></li>
     <li><a href="#current-art">current art</a></li>
     <li><a href="#substrate">substrate map</a></li>
     <li><a href="#log">frontier log</a></li>
+    <li><a href="#dream">the dream</a></li>
   </ul>
 </nav>
 
@@ -42,7 +84,7 @@
   <div class="scrollhint">scroll — the map is below</div>
 </header>
 
-<main>
+<main id="main-content">
 
 <!-- ================= 01 / DOCTRINE ================= -->
 <section id="doctrine">
@@ -152,7 +194,7 @@
     <div>
       <h3>Closing line</h3>
       <blockquote><b>"Frontier is not a place.</b> It is the practice of keeping this map true while everything underneath it changes."</blockquote>
-      <p style="margin-top: var(--line)">When the map holds at full self-driving — lazy prompt in, verified system out,
+      <p class="doctrine-closing">When the map holds at full self-driving — lazy prompt in, verified system out,
       routes and lanes and delegations rewritten mid-run by the engine itself — that is <b>escape velocity</b>.
       That is ufo-fsd.</p>
     </div>
@@ -285,7 +327,7 @@
         Every round, every lane change, every dry fallback and gate — tracked as it happens, from the current
         stack to the day ufo-fsd launches full self-driving. This is the repo to watch if you want to see how
         the frontier gets built, not just that it got built.</p>
-        <div class="tlink"><a href="https://github.com/VeigaPunk/xbgst-gdsp-fknpft">github.com/VeigaPunk/xbgst-gdsp-fknpft →</a></div>
+        <div class="tlink"><span class="tdim">github.com/VeigaPunk/xbgst-gdsp-fknpft (private)</span></div>
       </div>
     </div>
   </div>
@@ -309,20 +351,21 @@
 
   <div class="mapwrap rv">
     <table class="map">
+      <caption>Substrate routing topology as logged 2026-08</caption>
       <thead>
-        <tr><th>lane</th><th>model class</th><th>role</th><th>access route</th></tr>
+        <tr><th scope="col">lane</th><th scope="col">model class</th><th scope="col">role</th><th scope="col">access route</th></tr>
       </thead>
       <tbody>
-        <tr><td>L1 — Judge</td><td>grok-4.6 class</td><td>Orchestration, critique, routing. Pinned for factuality — lowest hallucination on the board.</td><td>SuperGrok Heavy OAuth + credit fallback</td></tr>
-        <tr><td>Review</td><td>gpt-5.6-sol class · low+fast</td><td>Code review and audit. Throughput-bound lane — speed and cost over peak reasoning.</td><td>ChatGPT Pro OAuth (high multiplier)</td></tr>
-        <tr><td>E2 — Execution</td><td>gpt-5.6-luna class</td><td>Execution tier. Fast, cheap, reliable tool use. Not the smartest; doesn't need to be.</td><td>ChatGPT Pro OAuth</td></tr>
-        <tr><td>L3 — Lightweight</td><td>gpt-5.3-codex-spark class</td><td>High-volume lightweight lane. Speed is the only metric that matters here.</td><td>ChatGPT Pro OAuth</td></tr>
-        <tr><td>Depth / Long context</td><td>kimi-k3 class</td><td>Deep reasoning, coding depth, long context. The lane that produced the 48/24 openpilot result. Opt-in, not a default pin.</td><td>Kimi OAuth (Vivace) + API fallback</td></tr>
-        <tr><td>Swarm fan-out</td><td>gpt-5.6-sol class · ultra</td><td>Parallel audit swarm — the 61-agent live run rode this lane.</td><td>ChatGPT Pro OAuth</td></tr>
-        <tr><td>Burn — volume</td><td>ds-flash class</td><td>Cheap expendable fan-out.</td><td>Alibaba Cloud token plans ×2</td></tr>
-        <tr><td>Burn — hard</td><td>ds-pro class</td><td>Expendable precision. Highest Vals SWE on the board as logged — used for volume, never to challenge a pin.</td><td>Alibaba Cloud token plans</td></tr>
-        <tr><td>Civic / xhigh</td><td>qwen3-max class</td><td>High-IQ non-coding consults; 1M context; surplus burn.</td><td>Alibaba Cloud token plans</td></tr>
-        <tr><td>Stealth</td><td>Ox Alpha</td><td>A stealth provider. Designation only.</td><td>—</td></tr>
+        <tr><th scope="row" data-label="lane">L1 — Judge</th><td data-label="model class">grok-4.6 class</td><td data-label="role">Orchestration, critique, routing. Pinned for factuality — lowest hallucination on the board.</td><td data-label="access route">SuperGrok Heavy OAuth + credit fallback</td></tr>
+        <tr><th scope="row" data-label="lane">Review</th><td data-label="model class">gpt-5.6-sol class · low+fast</td><td data-label="role">Code review and audit. Throughput-bound lane — speed and cost over peak reasoning.</td><td data-label="access route">ChatGPT Pro OAuth (high multiplier)</td></tr>
+        <tr><th scope="row" data-label="lane">E2 — Execution</th><td data-label="model class">gpt-5.6-luna class</td><td data-label="role">Execution tier. Fast, cheap, reliable tool use. Not the smartest; doesn't need to be.</td><td data-label="access route">ChatGPT Pro OAuth</td></tr>
+        <tr><th scope="row" data-label="lane">L3 — Lightweight</th><td data-label="model class">gpt-5.3-codex-spark class</td><td data-label="role">High-volume lightweight lane. Speed is the only metric that matters here.</td><td data-label="access route">ChatGPT Pro OAuth</td></tr>
+        <tr><th scope="row" data-label="lane">Depth / Long context</th><td data-label="model class">kimi-k3 class</td><td data-label="role">Deep reasoning, coding depth, long context. The lane that produced the 48/24 openpilot result. Opt-in, not a default pin.</td><td data-label="access route">Kimi OAuth (Vivace) + API fallback</td></tr>
+        <tr><th scope="row" data-label="lane">Swarm fan-out</th><td data-label="model class">gpt-5.6-sol class · ultra</td><td data-label="role">Parallel audit swarm — the 61-agent live run rode this lane.</td><td data-label="access route">ChatGPT Pro OAuth</td></tr>
+        <tr><th scope="row" data-label="lane">Burn — volume</th><td data-label="model class">ds-flash class</td><td data-label="role">Cheap expendable fan-out.</td><td data-label="access route">Alibaba Cloud token plans ×2</td></tr>
+        <tr><th scope="row" data-label="lane">Burn — hard</th><td data-label="model class">ds-pro class</td><td data-label="role">Expendable precision. Highest Vals SWE on the board as logged — used for volume, never to challenge a pin.</td><td data-label="access route">Alibaba Cloud token plans</td></tr>
+        <tr><th scope="row" data-label="lane">Civic / xhigh</th><td data-label="model class">qwen3-max class</td><td data-label="role">High-IQ non-coding consults; 1M context; surplus burn.</td><td data-label="access route">Alibaba Cloud token plans</td></tr>
+        <tr><th scope="row" data-label="lane">Stealth</th><td data-label="model class">Ox Alpha</td><td data-label="role">A stealth provider. Designation only.</td><td data-label="access route">—</td></tr>
       </tbody>
     </table>
   </div>
@@ -389,7 +432,7 @@ kimi is still walking r14-3 — now writing its own repo. still hands-off.</pre>
 
   <div class="dreamgrid rv">
     <figure class="dreamfig">
-      <img id="dreamimg" width="460" height="527" alt="The blue submersible — the frontier vessel, orange robot and small companion riding the hull">
+      <img id="dreamimg" src="dream.webp" width="460" height="527" alt="The blue submersible — the frontier vessel, orange robot and small companion riding the hull" loading="lazy" decoding="async">
       <figcaption>the vessel — big hero 6, flight mode. soft exterior, hardcore engineering underneath.</figcaption>
     </figure>
     <div class="dreamquote">
@@ -423,7 +466,6 @@ kimi is still walking r14-3 — now writing its own repo. still hands-off.</pre>
   <p class="fart">no prior art. only current art, done live.</p>
 </footer>
 
-<script src="dream.js"></script>
-<script src="main.js"></script>
+<script src="main.js?v=20260825" defer></script>
 </body>
 </html>
