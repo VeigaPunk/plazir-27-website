@@ -80,7 +80,10 @@ a:focus-visible { background: var(--red); color: var(--hover-fg); outline: 2px s
   font-family: var(--mono);
 }
 #boot:focus-visible { outline: 2px solid var(--red); outline-offset: -4px; }
-#boot.done { opacity: 0; pointer-events: none; }
+#boot.done {
+  opacity: 0; pointer-events: none; visibility: hidden;
+  transition: opacity .35s ease-out, visibility 0s linear .35s;
+}
 #boot .bline { display: block; min-height: var(--line); }
 #boot .bdim { color: var(--ink-faint); }
 
@@ -399,7 +402,7 @@ table.map caption {
   table.map td::before {
     content: attr(data-label);
     display: block; font-size: 10px; letter-spacing: .2em;
-    text-transform: uppercase; color: var(--red-dim);
+    text-transform: uppercase; color: var(--red);
   }
   table.map td:first-child, table.map td { white-space: normal; }
 }
@@ -460,6 +463,9 @@ footer .touch {
   scrollbar-width: none;
 }
 footer .touch::-webkit-scrollbar { display: none; }
+@media (max-width: 480px) {
+  footer .touch { font-size: 8px; line-height: 12px; }
+}
 footer p { max-width: 68ch; margin-left: auto; margin-right: auto; }
 footer .fquote { color: var(--ink); font-size: 15px; line-height: 24px; margin-bottom: var(--line); }
 footer .fquote b { color: var(--red); }

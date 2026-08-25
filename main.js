@@ -29,7 +29,12 @@
     setTimeout(bootNext, txt ? 90 : 30);
   };
   const finishBoot = () => {
-    setTimeout(() => boot.classList.add('done'), 350);
+    if (boot.classList.contains('done')) return;
+    setTimeout(() => {
+      boot.classList.add('done');
+      boot.setAttribute('aria-hidden', 'true');
+      boot.tabIndex = -1;
+    }, 350);
   };
   boot.addEventListener('click', finishBoot);
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -140,6 +145,21 @@
       out += '\n';
     }
     gridEl.textContent = out;
+  }
+
+  /* ---------- mobile nav ---------- */
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  if (menuToggle && navMenu) {
+    const setMenu = (open) => {
+      navMenu.classList.toggle('open', open);
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Close section menu' : 'Open section menu');
+    };
+    menuToggle.addEventListener('click', () => setMenu(!navMenu.classList.contains('open')));
+    navMenu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+    document.addEventListener('click', (e) => { if (!e.target.closest('nav')) setMenu(false); });
   }
 
   /* ---------- scroll reveal ---------- */
